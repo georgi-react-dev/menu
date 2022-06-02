@@ -1,0 +1,39 @@
+.categories {
+  color: var(--gold);
+  width: 300px;
+  margin: auto;
+  justify-content: space-between;
+ 
+  margin-top: 30px;
+}
+
+.categories ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.categories ul li{
+  list-style: none;
+  display: flex;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: 0.5s all;
+  font-weight: bold;
+}
+
+.categories ul li:hover{
+  background-color: var(--gold);
+  color:var(--white);
+  
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--gold);
+  color:var(--white);
+  
+  cursor: pointer;
+}
