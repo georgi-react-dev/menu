@@ -14,19 +14,20 @@ function App() {
 
     setCategories(categoriesItems);
   }
-  const filteredItems = () => {
+  const filteredItems = useCallback(() => {
     const pr =  menuItems.filter(item => {
       if(currentCategory === 'all') {
         return item
       }
       return item.category === currentCategory
     });
+    console.log("test");
     setFilteredMenuItems(pr);
-  }
+  },[currentCategory])
   useEffect(() => {
     getCategories();
     filteredItems();
-  }, [currentCategory])
+  }, [currentCategory,filteredItems])
   
   
   return (
